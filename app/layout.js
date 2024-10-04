@@ -7,6 +7,7 @@ import Navbar from "./components/navbar";
 import "./css/card.scss";
 import "./css/globals.scss";
 import ScrollToTop from "./components/helper/scroll-to-top";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -19,9 +20,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" /> {/* Add this line */}
+        <link rel="icon" href="/favicon.ico" />
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+        {/* Corrected viewport meta tag */}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
       </head>
       <body className={inter.className}>
         <ToastContainer />
