@@ -41,7 +41,7 @@ function Navbar() {
         <ul
           className={`fixed top-0 left-0 h-full flex pt-20 md:pt-0 items-center md: flex-col md:flex-row w-3/4 max-w-xs transform bg-black bg-opacity-90 shadow-lg transition-transform duration-300 ease-in-out z-50 ${
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
-          } md:static md:flex md:w-auto md:h-auto  md:bg-transparent md:space-x-4 md:transform-none`}
+          } md:static md:flex ml-[50rem] md:gap-2 flex-1 md:bg-transparent`}
           id="navbar-default"
         >
           <li>
