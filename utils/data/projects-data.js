@@ -6,16 +6,16 @@ import travel from '/public/image/travel.jpg';
 export const projectsData = [
     {
         id: 1,
-        name: 'iShop E-commerce website',
-        description: "Me and my team built an AI-powered financial mobile application. I have developed API using Express, Typescript, OpenAI, AWS, and MongoDB. Used OTP via AWS SES, Google, and Facebook for the authentication system. Built AI assistants using OpenAI's latest model and trained using our dataset. Voice messages are converted to text using AWS Transcribe. The app fetches data from Google Sheets and generates a PDF term sheet, sent via AWS SES.",
+        name: 'iShop Website',
+        description: "I developed the iShop e-commerce website, combining a sleek frontend built with React and a robust backend using Node.js. The site features secure user authentication and integrates a payment gateway for smooth transactions. I utilized Redux for efficient state management and ensured a responsive design using Tailwind CSS for a modern UI. The backend is powered by Express and MongoDB, providing a reliable database for storing user and product information. This project not only enhances online shopping experiences but also demonstrates my ability to create full-stack applications that are user-friendly and functional.",
         image: crefin,
         githubLink:"sdf",
         demoLink:"fds"
     },
     {
         id: 2,
-        name: 'Car Hub Website',
-        description: 'I have designed and developed a full-stack web app for 2Expedition, a travel agency in Armenia. I created the UI using NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor, and React Slick. The app supports multiple languages and currencies. I developed the API using NestJS, Typescript, MySQL, TypeORM, AWS, and Nodemailer. I deployed the front-end app to AWS Amplify and the back-end app to AWS EC2.',
+        name: 'Car_Hub Website',
+        description: 'I developed the Car Hub project using Next.js for a dynamic and responsive frontend. The application integrates with Rapid API for seamless backend communication, allowing users to access real-time car data effortlessly. It features advanced filtering options, enabling users to easily sort and find their ideal cars based on various criteria. With a focus on a user-friendly experience, the site adapts perfectly to different devices, ensuring smooth navigation and functionality. This project showcases my skills in building modern web applications that are both efficient and visually appealing.',
         image: travel,
         githubLink:"sdf",
         demoLink:"das"
@@ -23,7 +23,7 @@ export const projectsData = [
     {
         id: 3,
         name: 'Online Shop',
-        description: 'My team built an AI-based real estate app using Replicate API and OpenAI. We used Express, Typescript, OpenAI, Replicate, Stripe, and Mongoose to develop the API. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have trained multiple AI assistants using the latest GPT model and integrated Replicate API for image processing. We added role-based auth, subscription plans, Cron job scheduling, and payment integration with Stripe.',
+        description: 'I created the Online Shop using Next.js, featuring a robust payment gateway and a fully responsive UI. This project demonstrates how to build an incredible e-commerce webshop with an admin dashboard and CMS using Next.js 14, Stripe for secure transactions, TypeScript for type safety, and Payload CMS for content management. The platform allows users to browse products seamlessly while providing administrators with easy control over inventory and content. This project showcases my expertise in developing modern web applications tailored for online shopping experiences.',
         image: realEstate,
         githubLink:"dsa",
         demoLink:"sda"

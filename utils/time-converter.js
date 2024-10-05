@@ -1,3 +1,6 @@
+
+const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY; // Ensure this is set correctly in your environment variables
+
 export function timeConverter(isoTime) {
   const currentTime = new Date().getTime();
   const pastTime = new Date(isoTime).getTime();
@@ -24,3 +27,5 @@ export function timeConverter(isoTime) {
     return `${years} years ago`;
   }
 }
+
+

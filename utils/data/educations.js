@@ -17,10 +17,10 @@ export const educations = [
     duration: "2019 - 2020",
     institution: "Board of Secondary Education, Rajsthan",
   },
-  {
-    id: 4,
-    title: "Secondary School",
-    duration: "2017 - 2018",
-    institution: "Board of Secondary Education, Rajsthan",
-  }
+  // {
+  //   id: 4,
+  //   title: "Secondary School",
+  //   duration: "2017 - 2018",
+  //   institution: "Board of Secondary Education, Rajsthan",
+  // }
 ]
