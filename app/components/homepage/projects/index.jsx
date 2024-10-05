@@ -1,7 +1,12 @@
 import { projectsData } from '@/utils/data/projects-data';
 import ProjectCard from './project-card';
 
+
+
+
+
 const Projects = () => {
+
 
   return (
     <div id='projects' className="relative z-50  my-12 lg:my-24">
@@ -40,38 +45,52 @@ const Projects = () => {
             {projectsData.slice(0, 3).map((project) => (
               <div
                 key={project.id}
-                className="group rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105"
+                className="group relative rounded-2xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 bg-gray-800 p-6"
               >
-                <div className="relative">
+                {/* Project Image */}
+                <div className="relative mb-4">
                   <img
-                    className="w-full h-56 object-cover rounded-t-xl transition-transform duration-500 transform group-hover:scale-110"
+                    className="w-full h-64 object-cover rounded-lg transition-transform duration-500 transform group-hover:scale-110"
                     src={project.image}
-                    alt={project.title}
+                    alt={project.name}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-100"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-100"></div>
                 </div>
-                <div className="p-6 text-center">
-                  <h2 className="text-3xl font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300 mb-3">
-                    {project.title}
+
+                {/* Project Details */}
+                <div className="text-center">
+                  <h2 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300 mb-2">
+                    {project.name}
                   </h2>
-                  <p className="text-white mb-6">{project.description}</p>
-                  <div className="flex justify-center space-x-4">
-                    <a
-                      href={project.demoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block bg-blue-500 text-white px-6 py-2 rounded-full shadow-lg hover:bg-blue-600 transition-transform transform hover:scale-105"
-                    >
-                      Live Demo
-                    </a>
-                    <a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block bg-gray-900 text-white px-6 py-2 rounded-full shadow-lg hover:bg-gray-800 transition-transform transform hover:scale-105"
-                    >
-                      GitHub Repo
-                    </a>
+                  <p className="text-gray-300 mb-4">{project.description}</p>
+
+                  {/* Buttons */}
+                  <div className="flex justify-center space-x-4 mt-4">
+                    {project.demoLink && (
+                      <a
+                        href={project.demoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300  hover:from-pink-500 hover:to-violet-600"
+                      >
+                        <button className="px-5 text-xs md:px-5 py-2 md:py-2 bg-[#0d1224] rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1 hover:gap-3">
+                          Live
+                        </button>
+                      </a>
+                    )}
+                    {project.githubLink && (
+                      <a
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 px-5 pe-5 flex item hover:from-pink-500 hover:to-violet-600"
+                      >
+                        <button>
+                          GitHub
+                        </button>
+
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
