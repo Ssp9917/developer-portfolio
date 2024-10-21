@@ -1,30 +1,25 @@
-import ayla from '/public/image/ayla.jpg';
-import crefin from '/public/image/crefin.jpg';
-import realEstate from '/public/image/real-estate.jpg';
-import travel from '/public/image/travel.jpg';
-
 export const projectsData = [
     {
         id: 1,
         name: 'iShop Website',
-        description: "I developed the iShop e-commerce website, combining a sleek frontend built with React and a robust backend using Node.js. The site features secure user authentication and integrates a payment gateway for smooth transactions. I utilized Redux for efficient state management and ensured a responsive design using Tailwind CSS for a modern UI. The backend is powered by Express and MongoDB, providing a reliable database for storing user and product information. This project not only enhances online shopping experiences but also demonstrates my ability to create full-stack applications that are user-friendly and functional.",
-        image: crefin,
+        description: "I developed the iShop e-commerce website using React and Node.js, featuring secure user authentication and a payment gateway for smooth transactions. With Redux for state management and Tailwind CSS for a responsive, modern UI, the backend is powered by Express and MongoDB to store user and product data. This project showcases my ability to build functional, full-stack applications.",
+        image: '/ishop.jpg',
         githubLink:"sdf",
         demoLink:"fds"
     },
     {
         id: 2,
-        name: 'Car_Hub Website',
-        description: 'I developed the Car Hub project using Next.js for a dynamic and responsive frontend. The application integrates with Rapid API for seamless backend communication, allowing users to access real-time car data effortlessly. It features advanced filtering options, enabling users to easily sort and find their ideal cars based on various criteria. With a focus on a user-friendly experience, the site adapts perfectly to different devices, ensuring smooth navigation and functionality. This project showcases my skills in building modern web applications that are both efficient and visually appealing.',
-        image: travel,
+        name: 'Restaurant Website',
+        description: 'I developed a restaurant website using the MERN stack, featuring an intuitive interface for browsing menus, placing orders, and making reservations. It includes real-time order tracking and an admin panel for managing menu items and reservations. The site is fully responsive, ensuring a seamless experience across devices, showcasing my ability to build efficient and user-friendly full-stack applications.',
+        image: '/cafe.jpg',
         githubLink:"sdf",
         demoLink:"das"
     },
     {
         id: 3,
-        name: 'Online Shop',
-        description: 'I created the Online Shop using Next.js, featuring a robust payment gateway and a fully responsive UI. This project demonstrates how to build an incredible e-commerce webshop with an admin dashboard and CMS using Next.js 14, Stripe for secure transactions, TypeScript for type safety, and Payload CMS for content management. The platform allows users to browse products seamlessly while providing administrators with easy control over inventory and content. This project showcases my expertise in developing modern web applications tailored for online shopping experiences.',
-        image: realEstate,
+        name: 'School Dashboard',
+        description: 'I developed a school dashboard using Next.js, featuring role-based access for students, teachers, and administrators. The dashboard allows users to manage schedules, track performance, and organize tasks. With a fully responsive design, it ensures seamless navigation across devices, highlighting my skills in creating scalable and efficient full-stack applications.  ',
+        image: '/school.jpg',
         githubLink:"dsa",
         demoLink:"sda"
     },

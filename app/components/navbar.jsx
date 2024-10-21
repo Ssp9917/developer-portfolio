@@ -11,95 +11,73 @@ function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Close the menu when a link is clicked
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <nav className="bg-transparent">
-      <div className="flex items-center justify-between py-5">
-        <div className="flex flex-shrink-0 items-center">
-          <Link
-            href="/"
-            className="text-[#16f2b3] md:text-3xl text-xl md:pl-0 pl-4 font-bold"
-          >
+    <nav className="bg-transparent  w-full z-50 ">
+      <div className="container mx-auto flex items-center justify-between px-4 py-5">
+        {/* Logo */}
+        <div className="text-[#16f2b3] text-2xl font-bold">
+          <Link href="/" onClick={closeMenu}>
             SONU SHARMA
           </Link>
         </div>
 
-        {/* Hamburger Icon for small screens */}
-        <div className="block md:hidden">
+        {/* Hamburger Icon for Mobile */}
+        <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-white focus:outline-none pr-4"
+            className="text-white text-2xl focus:outline-none"
           >
-            {isMenuOpen ? (
-              <FaTimes className="text-xl" /> // Cross Icon when open
-            ) : (
-              <FaBars className="text-xl" /> // Hamburger Icon when closed
-            )}
+            {isMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
 
-        {/* Main Menu - hidden on small screens */}
-        <ul
-          className={`fixed top-0 left-0 h-full flex pt-20 md:pt-0 items-center md: flex-col md:flex-row w-3/4 max-w-xs transform bg-black bg-opacity-90 shadow-lg transition-transform duration-300 ease-in-out z-50 ${
-            isMenuOpen ? "translate-x-0" : "-translate-x-full"
-          } md:static md:flex md:ml-[50rem] md:gap-2 flex-1 md:bg-transparent`}
-          id="navbar-default"
-        >
-          <li>
-            <Link
-              onClick={toggleMenu} // Close menu on link click
-              className="block px-6 md:px-0 md:py-0 py-4  no-underline outline-none hover:no-underline"
-              href="/#about"
-            >
-              <div className="text-base text-white transition-colors duration-300 hover:text-[#16f2b3]">
-                ABOUT
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={toggleMenu}
-              className="block px-6 py-4 md:px-0 md:py-0 no-underline outline-none hover:no-underline"
-              href="/#experience"
-            >
-              <div className="text-base text-white transition-colors duration-300 hover:text-[#16f2b3]">
-                EXPERIENCE
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={toggleMenu}
-              className="block px-6 py-4 md:px-0 md:py-0 no-underline outline-none hover:no-underline"
-              href="/#skills"
-            >
-              <div className="text-base text-white transition-colors duration-300 hover:text-[#16f2b3]">
-                SKILLS
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={toggleMenu}
-              className="block px-6 py-4 md:px-0 md:py-0 no-underline outline-none hover:no-underline"
-              href="/#education"
-            >
-              <div className="text-base text-white transition-colors duration-300 hover:text-[#16f2b3]">
-                EDUCATION
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={toggleMenu}
-              className="block px-6 py-4 md:px-0 md:py-0 no-underline outline-none hover:no-underline"
-              href="/#projects"
-            >
-              <div className="text-base text-white transition-colors duration-300 hover:text-[#16f2b3]">
-                PROJECTS
-              </div>
-            </Link>
-          </li>
+        {/* Navigation Links for Larger Screens */}
+        <ul className="hidden md:flex gap-6">
+          {["ABOUT", "EXPERIENCE", "SKILLS", "EDUCATION", "PROJECTS"].map(
+            (item, index) => (
+              <li key={index}>
+                <Link
+                  href={`/#${item.toLowerCase()}`}
+                  className="no-underline outline-none hover:no-underline"
+                >
+                  {item}
+                </Link>
+              </li>
+            )
+          )}
         </ul>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <ul className="fixed inset-0 w-[70%] bg-black bg-opacity-80 flex flex-col items-center justify-center space-y-8 transform transition-transform duration-300 ease-in-out z-40 md:hidden">
+            {["ABOUT", "EXPERIENCE", "SKILLS", "EDUCATION", "PROJECTS"].map(
+              (item, index) => (
+                <li key={index}>
+                  <Link
+                    href={`/#${item.toLowerCase()}`}
+                    onClick={closeMenu}
+                    className="text-white text-xl transition-colors duration-300 hover:text-[#16f2b3]"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              )
+            )}
+          </ul>
+        )}
+
+        {/* Overlay for Mobile Menu */}
+        {/* {isMenuOpen && (
+          <div
+            className="fixed inset-0 bg-black opacity-50 z-30 md:hidden"
+            onClick={closeMenu}
+          ></div>
+        )} */}
       </div>
     </nav>
   );

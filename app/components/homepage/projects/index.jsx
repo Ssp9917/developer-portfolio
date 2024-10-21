@@ -1,9 +1,10 @@
+"use client"
 import { projectsData } from '@/utils/data/projects-data';
 import ProjectCard from './project-card';
 
 
 
-
+console.log(projectsData)
 
 const Projects = () => {
 
@@ -45,7 +46,7 @@ const Projects = () => {
             {projectsData.slice(0, 3).map((project) => (
               <div
                 key={project.id}
-                className="group relative rounded-2xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 bg-gray-800 p-6"
+                className="relative rounded-2xl shadow-lg overflow-hidden bg-gray-800 p-6"
               >
                 {/* Project Image */}
                 <div className="relative mb-4">
@@ -62,7 +63,7 @@ const Projects = () => {
                   <h2 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300 mb-2">
                     {project.name}
                   </h2>
-                  <p className="text-gray-300 mb-4">{project.description}</p>
+                  <p className="text-gray-400 mb-4">{project.description}</p>
 
                   {/* Buttons */}
                   <div className="flex justify-center space-x-4 mt-4">
