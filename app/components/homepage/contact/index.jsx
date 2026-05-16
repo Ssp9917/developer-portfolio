@@ -1,5 +1,5 @@
 // @flow strict
-import { personalData } from '@/utils/data/personal-data';
+import { personalData as defaultPersonalData } from '@/utils/data/personal-data';
 import Link from 'next/link';
 import { BiLogoLinkedin } from "react-icons/bi";
 import { CiLocationOn } from "react-icons/ci";
@@ -10,7 +10,7 @@ import { MdAlternateEmail } from "react-icons/md";
 import ContactWithCaptcha from './contact-with-captcha';
 import ContactWithoutCaptcha from './contact-without-captcha';
 
-function ContactSection() {
+function ContactSection({ personalData = defaultPersonalData }) {
   return (
     <div id="contact" className="my-12 lg:my-16 relative mt-24 text-white">
       <div className="hidden lg:flex flex-col items-center absolute top-24 -right-8">

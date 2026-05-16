@@ -1,12 +1,7 @@
 "use client"
-import { projectsData } from '@/utils/data/projects-data';
-import ProjectCard from './project-card';
+import { projectsData as defaultProjectsData } from '@/utils/data/projects-data';
 
-
-
-console.log(projectsData)
-
-const Projects = () => {
+const Projects = ({ projectsData = defaultProjectsData }) => {
 
 
   return (
