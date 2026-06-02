@@ -3,9 +3,11 @@
 import { experiences as defaultExperiences } from "@/utils/data/experience";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
-import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 import experience from '/public/lottie/code.json';
+import dynamic from "next/dynamic";
+
+const AnimationLottie = dynamic(() => import("../../helper/animation-lottie"), { ssr: false });
 
 function Experience({ experiences = defaultExperiences }) {
   return (
