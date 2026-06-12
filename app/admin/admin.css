@@ -99,3 +99,29 @@
   min-height: 120px;
   resize: vertical;
 }
+
+/* Custom Scrollbar for Admin Panel */
+.admin-shell ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.admin-shell ::-webkit-scrollbar-track {
+  background: #0d1224;
+}
+.admin-shell ::-webkit-scrollbar-thumb {
+  background: #1f223c;
+  border-radius: 4px;
+}
+.admin-shell ::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
+
+/* Glassmorphic border glow on cards */
+.admin-card {
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.admin-card:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.15);
+}
+
