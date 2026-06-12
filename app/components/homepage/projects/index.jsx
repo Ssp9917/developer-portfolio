@@ -53,12 +53,11 @@ const Projects = ({ projectsData = defaultProjectsData }) => {
                         href={project.githubLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 px-5 pe-5 flex item hover:from-pink-500 hover:to-violet-600"
+                        className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 hover:from-pink-500 hover:to-violet-600"
                       >
-                        <button>
+                        <button className="px-5 text-xs md:px-5 py-2 md:py-2 bg-[#0d1224] rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out md:font-semibold flex items-center gap-1 hover:gap-3">
                           GitHub
                         </button>
-
                       </a>
                     )}
                   </div>
